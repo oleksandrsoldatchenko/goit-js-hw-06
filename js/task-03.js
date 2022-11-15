@@ -13,18 +13,27 @@ const images = [
   },
 ];
 
-const galleryEl = document.querySelector("ul");
+// -----------------------version 1
+// const galleryEl = document.querySelector("ul");
+// const element = images
+//   .map(function ({url, alt}) {
+//     return `<li><img src="${url}" alt="${alt}" width="490"></li>`;
+//   })
+//   .join('');
+// galleryEl.insertAdjacentHTML('afterbegin', element);
+// galleryEl.style.cssText = `
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   list-style: none;
+//   padding: 0;
+// `;
+
+// -----------------------version 2
+const galleryEl = document.querySelector('.gallery');
 const element = images
   .map(function ({url, alt}) {
     return `<li><img src="${url}" alt="${alt}" width="490"></li>`;
   })
   .join('');
 galleryEl.insertAdjacentHTML('afterbegin', element);
-
-galleryEl.style.cssText = `
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  list-style: none;
-  padding: 0;
-`;
